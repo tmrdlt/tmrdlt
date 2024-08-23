@@ -1,16 +1,37 @@
-### Hi there 👋
+# Hi 👋
 
-<!--
-**tmrdlt/tmrdlt** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+```Scala
+@main
+def welcome(): Unit = {
+  val me = SoftwareEngineer(
+    name = "Timo Erdelt",
+    role = "Full Stack Software Engineer",
+    company = "Unit 214 GmbH",
+    languages = Seq("de-DE", "en-US", "es-ES"),
+    technologies = Seq("Scala", "TypeScript", "React", "Rust", "Go")
+  )
+  me.sayHi()
+  me.introduce()
+  me.sayGoodbye()
+}
 
-Here are some ideas to get you started:
+class SoftwareEngineer(name: String,
+                       role: String,
+                       company: String,
+                       languages: Seq[String],
+                       technologies: Seq[String]) {
+  def sayHi(): Unit =
+    println(s"Hi there, thank you for dropping by!")
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  def introduce(): Unit = {
+    println(s"My name is $name.")
+    println(s"I'm a $role @ $company.")
+    println(s"I speak the following languages: ${languages.mkString(", ")}.")
+    println(s"My favorite technologies include: ${technologies.mkString(", ")}.")
+  }
+
+  def sayGoodbye(): Unit = {
+    println(s"Feel free to connect or explore some of my repositories. Until next time!")
+  }
+}
+```
