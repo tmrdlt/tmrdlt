@@ -6,7 +6,7 @@ def welcome(): Unit = {
   val me = SoftwareEngineer(
     name = "Timo Erdelt",
     role = "Full Stack Software Engineer",
-    company = "Unit 214 GmbH",
+    company = "Hula Earth",
     languages = Seq("de-DE", "en-US", "es-ES"),
     technologies = Seq("Scala", "TypeScript", "React", "Rust", "Go")
   )
